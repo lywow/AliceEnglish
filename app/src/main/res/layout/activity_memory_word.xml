@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include layout="@layout/main_title_bar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTitle"
+        android:paddingTop="30dp"
+        android:paddingBottom="60dp"
+        android:paddingHorizontal="24dp"
+        android:background="#EFEFEF">
+
+        <RelativeLayout
+            android:id="@+id/layoutWord"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:lines="1"
+
+                android:text="heritage"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/blank1"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tvWord"/>
+            <TextView
+                android:id="@+id/tvWordPhonetic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/blank1"
+                android:lines="1"
+
+                android:text="/heritage/"
+                android:textSize="18sp"
+                android:textColor="#666666" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvChinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutWord"
+            android:layout_marginTop="10dp"
+
+            android:text="n. 666666666666666\nv. ddddddddd"
+
+            android:textSize="20sp"
+            android:textColor="#222222"/>
+
+        <TextView
+            android:id="@+id/tvWordOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvChinese"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="20dp"
+
+            android:text="这个单词你记录了5次\n最后一次在2020-6-13"
+            android:textColor="#666666"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:id="@+id/bnMemoryWord"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/memory_button_border"
+
+                android:text="我认识"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"/>
+
+            <Button
+                android:id="@+id/bnDontMemoryWord"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/bnMemoryWord"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dont_memory_button"
+
+                android:text="记不住了"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

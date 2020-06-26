@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/main_title_bar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="24dp">
+
+        <ListView
+            android:id="@+id/lvParagraphList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="30dp"
+    android:paddingHorizontal="24dp"
+    android:background="#EFEFEF">
+
+    <com.xuexiang.xui.widget.progress.loading.ARCLoadingView
+        android:id="@+id/arcLoading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:lv_auto="false"
+        app:lv_has_icon="false"
+        app:lv_width="6dp"
+        app:lv_color="#299EE3"
+        app:lv_speed="5"/>
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:lines="1"
+        android:layout_marginTop="50dp"
+
+        android:text="数据加载发生了错误"
+        android:textSize="25sp"
+        android:textColor="#666666" />
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layoutWord"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:lines="1"
+
+                android:text="heritage"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/blank1"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tvWord"/>
+            <TextView
+                android:id="@+id/tvWordPhonetic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/blank1"
+                android:lines="1"
+
+                android:text="/heritage/"
+                android:textSize="18sp"
+                android:textColor="#666666" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvChinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutWord"
+            android:layout_marginTop="10dp"
+
+            android:text="n. 666666666666666\nv. ddddddddd"
+
+            android:textSize="20sp"
+            android:textColor="#222222"/>
+
+        <Button
+            android:id="@+id/bnWord"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvChinese"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/new_word_button_border"
+
+            android:text="记录这个单词"
+            android:textColor="#00CED1"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/bnWord"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

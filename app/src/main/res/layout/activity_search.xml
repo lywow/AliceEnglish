@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include layout="@layout/main_title_bar" />
+
+    </RelativeLayout>
+
+    <com.xuexiang.xui.widget.edittext.ValidatorEditText
+        android:id="@+id/vetSearch"
+        style="@style/EditText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:layout_below="@+id/layoutTitle"
+        app:vet_tipPosition="top"
+        app:vet_regexp="[a-zA-Z]"
+        app:vet_errorMessage="只能包含英文字母"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vetSearch">
+
+        <include layout="@layout/activity_word"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

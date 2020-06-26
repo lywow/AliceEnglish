@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layoutEssayOther"
+        android:layout_width="match_parent"
+        android:layout_height="26dp">
+
+        <TextView
+            android:id="@+id/tvEssayTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:lines="1"
+            android:background="@drawable/tag_view_border"
+
+            android:text="科技"
+            android:textSize="14sp"
+            android:textColor="#111111" />
+
+        <View
+            android:id="@+id/blank1"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tvEssayTag"/>
+
+        <TextView
+            android:id="@+id/tvEssayWordNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:lines="1"
+            android:background="@drawable/tag_view_border"
+            android:layout_toRightOf="@+id/blank1"
+
+            android:text="300词"
+            android:textSize="14sp"
+            android:textColor="#111111" />
+
+        <View
+            android:id="@+id/blank2"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tvEssayWordNumber"/>
+
+        <TextView
+            android:id="@+id/tvEssayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:lines="1"
+            android:background="@drawable/tag_view_border"
+            android:layout_toRightOf="@+id/blank2"
+
+            android:text="2020-06-13"
+            android:textSize="14sp"
+            android:textColor="#111111" />
+
+    </RelativeLayout>
+
+    <com.alice.aliceenglish.view.FlowLayout
+        android:id="@+id/tvEssayContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <View
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+</RelativeLayout>

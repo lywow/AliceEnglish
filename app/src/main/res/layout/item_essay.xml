@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:paddingHorizontal="15dp"
+    android:background="@drawable/item_essay_view_border"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvEssayTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:lines="2"
+
+        android:text="Tiny Human Livers Grown in Lab and Transplanted Into Rats"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvEssayDescribe"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:gravity="center_vertical"
+
+                android:text="定制器官？皮肤细胞培育出微型人类肝脏"
+                android:textSize="16sp"
+                android:textColor="#666666" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvEssayTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:lines="1"
+                    android:background="@drawable/tag_view_border"
+
+                    android:text="科技"
+                    android:textSize="14sp"
+                    android:textColor="#111111" />
+
+                <View
+                    android:id="@+id/blank1"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvEssayTag"/>
+
+                <TextView
+                    android:id="@+id/tvEssayWordNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:lines="1"
+                    android:background="@drawable/tag_view_border"
+                    android:layout_toRightOf="@+id/blank1"
+
+                    android:text="300词"
+                    android:textSize="14sp"
+                    android:textColor="#111111" />
+
+                <View
+                    android:id="@+id/blank2"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvEssayWordNumber"/>
+
+                <TextView
+                    android:id="@+id/tvEssayTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:lines="1"
+                    android:background="@drawable/tag_view_border"
+                    android:layout_toRightOf="@+id/blank2"
+
+                    android:text="2020-06-13"
+                    android:textSize="14sp"
+                    android:textColor="#111111" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/tvEssayImage"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/test"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

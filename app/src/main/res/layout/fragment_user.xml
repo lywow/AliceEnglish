@@ -69,4 +69,114 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layoutChangeUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layoutMemoryWord"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/user_button_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+
+            android:text="更换账号"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutClearMotion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layoutChangeUser"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/user_button_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+
+            android:text="清除动作数据"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTestOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layoutClearMotion"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/user_button_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+
+            android:text="测试按钮1"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTestTwo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layoutTestOne"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/user_button_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+
+            android:text="测试按钮2"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
 </RelativeLayout>

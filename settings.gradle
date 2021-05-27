@@ -1,2 +1,3 @@
+//include ':collector'
 include ':app'
 rootProject.name = "AliceEnglish"

@@ -9,25 +9,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.Switch;
 
 import com.alice.aliceenglish.R;
-import com.alice.aliceenglish.adapter.EssayListAdapter;
 import com.alice.aliceenglish.adapter.MyFragmentAdapter;
-import com.alice.aliceenglish.entity.Essay;
 import com.alice.aliceenglish.fragment.EssayFragment;
 import com.alice.aliceenglish.fragment.UserFragment;
 import com.alice.aliceenglish.fragment.WordFragment;
-import com.alice.aliceenglish.test.EssayData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.xuexiang.xui.utils.SnackbarUtils;
-import com.xuexiang.xui.widget.searchview.MaterialSearchView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,24 +95,33 @@ public class MainActivity extends AppCompatActivity {
         myFragmentAdapter=new MyFragmentAdapter(getSupportFragmentManager(),fragmentList);
         viewPager=findViewById(R.id.viewPager);
         viewPager.setAdapter(myFragmentAdapter);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                //改变底部按钮颜色
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+//        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                //改变底部按钮颜色
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
         viewPager.setCurrentItem(0);
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }

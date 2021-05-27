@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'trace-point' //无埋点插件应用
 
 android {
     compileSdkVersion 29
@@ -21,6 +22,12 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/NOTICE'
@@ -30,10 +37,22 @@ android {
     }
 }
 
+noTracePoint{
+    pluginName = "tracepoint" //插件名称随意命名
+    //接收事件处理类（插件会将以下自定义类的相关方法插入目标方法中）
+    targetClassName = 'com.alice.collector.inserter.InterceptEventHanlder'
+    //开启会将修改后的文件copy一份到app/build/trace-point目录下，用于查看修改结果
+    outputModifyFile = false
+    //目标包名 数组类型（一般场景写业务模块包名即可）
+    targetPackages = ['com.alice']
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+
     implementation files('libs\\commons-codec-1.13.jar')
     implementation files('libs\\commons-cli-1.4.jar')
     implementation files('libs\\httpclient5-5.0.jar')

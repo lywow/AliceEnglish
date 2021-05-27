@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.alice.aliceenglish.R;
 import com.alice.aliceenglish.activity.EssayActivity;
-import com.alice.aliceenglish.activity.MainActivity;
 import com.alice.aliceenglish.adapter.EssayListAdapter;
 import com.alice.aliceenglish.entity.Essay;
 import com.alice.aliceenglish.test.EssayData;
